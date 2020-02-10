@@ -1,10 +1,10 @@
 <div class="container">
 <h3>Create Employee</h3>
-<div style="width: 400px;">
+<div >
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">First Name</label>
-      <input type="text" class="form-control" formControlName="firstname" required  name="firstname">
+      <input type="text" class="form-control col-lg-4 col-md-6 col-sm-10" formControlName="firstname" required maxlength="30" name="firstname">
       <div  *ngIf="formGroup.controls['firstname'].errors && formGroup.controls['firstname'].dirty">
         <span style="color: red;"  *ngIf="formGroup.controls['firstname'].errors['required']">Firstname Required!</span>
       </div>
@@ -12,7 +12,7 @@
 
     <div class="form-group">
       <label for="name">Last Name</label>
-      <input type="text" class="form-control" formControlName="lastname" required  name="lastname">
+      <input type="text" class="form-control col-lg-4 col-md-6 col-sm-10" formControlName="lastname" maxlength="30" required  name="lastname">
       <div  *ngIf="formGroup.controls['lastname'].errors && formGroup.controls['lastname'].dirty">
         <span style="color: red;"  *ngIf="formGroup.controls['lastname'].errors['required']">Lastname Required!</span>
       </div>
@@ -20,7 +20,7 @@
 
     <div class="form-group">
       <label for="name">Email ID</label>
-      <input type="text" class="form-control" formControlName="emailId" required  name="emailId">
+      <input type="text" class="form-control col-lg-4 col-md-6 col-sm-10" formControlName="emailId" maxlength="30" required  name="emailId">
       <div  *ngIf="formGroup.controls['emailId'].errors && formGroup.controls['emailId'].dirty">
         <span style="color: red;" *ngIf="formGroup.controls['emailId'].errors['required']">Email Required!</span>
         <span  style="color: red;" *ngIf="formGroup.controls['emailId'].errors['email']">Email Invalid!</span>
